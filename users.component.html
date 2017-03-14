@@ -1,0 +1,11 @@
+<!--This is a text box on typing in which, the matching users are fetched from model-->
+Type User Role: <input type="text" #userRole name="userRole" [(ngModel)]="myRole" (keyup)="fetchUsersMatchingRole()">
+
+<ul>
+<!--iterating using ngFor over the list passed from model-->
+
+<ul>
+<li *ngFor ="let user of matchingUsers">
+{{user.name}}**{{user.role}}
+</li>
+</ul>
